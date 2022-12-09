@@ -12,3 +12,11 @@ resource "helm_release" "argocd" {
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-cd"
 }
+
+resource "helm_release" "prometheus" {
+  name       = "prometheus"
+  namespace  = "prometheus"
+
+  repository = "https://prometheus-community.github.io/helm-charts"
+  chart      = "prometheus"
+}

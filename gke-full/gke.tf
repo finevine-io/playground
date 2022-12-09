@@ -27,7 +27,7 @@ module "gke" {
       machine_type              = "e2-medium"
       node_locations            = "us-central1-b,us-central1-c"
       min_count                 = 1
-      max_count                 = 3
+      max_count                 = 2
       local_ssd_count           = 0
       spot                      = false
       disk_size_gb              = 100
@@ -38,7 +38,7 @@ module "gke" {
       auto_repair               = true
       auto_upgrade              = true
       preemptible               = false
-      initial_node_count        = 2
+      initial_node_count        = 1
     },
   ]
 
