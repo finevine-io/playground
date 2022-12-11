@@ -21,14 +21,3 @@ variable "subnetwork" {
   description = "The subnetwork created to host the cluster in"
   default     = "gke-argocd-subnet"
 }
-
-variable "ip_range_pods_name" {
-  description = "The secondary ip range to use for pods"
-  default     = "gke-argocd-ip-range-pods"
-}
-
-variable "ip_range_services_name" {
-  description = "The secondary ip range to use for services"
-  default     = "gke-argocd-ip-range-svc"
-}
-

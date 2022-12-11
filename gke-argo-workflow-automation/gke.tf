@@ -12,10 +12,10 @@ module "gke" {
   name                       = "gke-test-1"
   region                     = var.region
   zones                      = ["us-central1-a", "us-central1-b", "us-central1-f"]
-  network                    = var.network
-  subnetwork                 = var.subnetwork
-  ip_range_pods              = var.ip_range_pods_name
-  ip_range_services          = var.ip_range_services_name
+  network                    = module.network.network_name
+  subnetwork                 = module.network.subnets_names[0]
+  ip_range_pods              = "${var.cluster_name}-ip-range-a"
+  ip_range_services          = "${var.cluster_name}-ip-range-b"
   http_load_balancing        = false
   network_policy             = false
   horizontal_pod_autoscaling = true

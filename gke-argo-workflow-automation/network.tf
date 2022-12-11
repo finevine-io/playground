@@ -16,11 +16,11 @@ module "network" {
   secondary_ranges = {
     (var.subnetwork) = [
       {
-        range_name    = var.ip_range_pods_name
+        range_name    = "${var.cluster_name}-ip-range-a"
         ip_cidr_range = "192.168.0.0/18"
       },
       {
-        range_name    = var.ip_range_services_name
+        range_name    = "${var.cluster_name}-ip-range-b"
         ip_cidr_range = "192.168.64.0/18"
       },
     ]
