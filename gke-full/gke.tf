@@ -9,7 +9,7 @@ provider "kubernetes" {
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
   project_id                 = var.project_id
-  name                       = "gke-test-1"
+  name                       = var.cluster_name
   region                     = var.region
   zones                      = ["us-central1-a", "us-central1-b", "us-central1-f"]
   network                    = var.network
