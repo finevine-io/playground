@@ -59,10 +59,6 @@ module "gke" {
 
   node_pools_metadata = {
     all = {}
-
-    default-node-pool = {
-      node-pool-metadata-custom-value = "my-node-pool"
-    }
   }
 
   node_pools_taints = {
